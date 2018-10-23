@@ -19,7 +19,7 @@ export class DogsComponent implements OnInit {
   ngOnInit() {
 
     this.data.getBreedImages(this.breedname).subscribe(data => {
-      this.breed = data.message;
+      this.breed = data['message'];
     });
   }
 
