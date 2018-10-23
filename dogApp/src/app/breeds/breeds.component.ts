@@ -20,7 +20,7 @@ export class BreedsComponent implements OnInit {
     // );
 
     this.data.getBreeds().subscribe(data => {
-      this.breeds = Object.keys(data.message);
+      this.breeds = Object.keys(data['message']);
     });
 
   }
@@ -28,7 +28,7 @@ export class BreedsComponent implements OnInit {
   getDogImage(breed: string) {
 
     this.data.getBreedImages(breed).subscribe(data => {
-      this.currentBreedImages = data.message;
+      this.currentBreedImages = data['message'];
     });
 
     return this.currentBreedImages[1];
