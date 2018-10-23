@@ -1,22 +1,23 @@
 import { DialogService } from 'ng2-bootstrap-modal';
-import { DogService } from '../../modules/dog/dog.service.ts';
+import { DogService } from 'src/app/modules/dog/dog.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-artists',
-    templateUrl: './artists.component.html',
-    styleUrls: ['./artists.component.css']
+    selector: 'app-breeds',
+    templateUrl: './breeds.component.html',
+    styleUrls: ['./breeds.component.css']
   })
-  export class ArtistsComponent {
-    artists: any[] = [ ];
-    attributes: any[] = [ ];
-    constructor(private _apiSvc: LastFmService, private _dialogService: DialogService) {
-      _apiSvc.getArtists(1).subscribe(x => {
-        this.artists = x.artists.artist;
-        this.attributes = x.artists['@attr'];
+  export class BreedsComponent {
+    breeds: any[] = [ ];
+    //attributes: any[] = [ ];
+    constructor(private _apiSvc: DogService, private _dialogService: DialogService) {
+      _apiSvc.getBreeds(1).subscribe(x => {
+        this.breeds = x.breeds.list;
+        //this.attributes = x.artists['@attr'];
        });
     }
-  
+
+    /*
     showDetail(index, artist) {
       console.log(index);
       console.log(artist.name);
@@ -30,5 +31,5 @@ import { Component, OnInit } from '@angular/core';
                     setTimeout(() => {
                         disposable.unsubscribe();
                     }, 10000);
-    }
+    }*/
   }

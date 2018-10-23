@@ -14,7 +14,7 @@ export class DogService {
   }
 
   getBreeds = (page: number) => this.http.get(
-    this.baseUri + 'https://dog.ceo/api/breeds/list/all' +
+    this.baseUri + 'https://dog.ceo/api/breeds/list' +
       this.limit + '&page=' + page, 
       { headers: this.headers }).map(x => {
         console.log(x.json());
