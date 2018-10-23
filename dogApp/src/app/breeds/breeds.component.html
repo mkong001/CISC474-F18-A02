@@ -1,0 +1,10 @@
+<h1>Dog Breeds</h1>
+
+<ul>
+  <li *ngFor="let breed of breeds">
+    <a routerLink="/dogs/{{breed}}">{{ breed }}</a>
+    <br />
+    <!-- <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg"> -->
+    <!-- <img src={{getDogImage(breed)}}> -->
+  </li>
+</ul>
