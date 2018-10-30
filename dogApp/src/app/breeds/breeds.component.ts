@@ -30,7 +30,7 @@ export class BreedsComponent implements OnInit {
     this.data.getBreedImages(breed).subscribe(data => {
       this.currentBreedImages = data['message'];
     });
-
+    console.log(this.currentBreedImages[1]);
     return this.currentBreedImages[1];
   }
 

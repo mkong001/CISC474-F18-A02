@@ -1,10 +1,13 @@
-<h1>Dog Breeds</h1>
+<h1 style="text-align:center">Dog Breeds</h1>
 
-<ul>
-  <li *ngFor="let breed of breeds">
-    <a routerLink="/dogs/{{breed}}">{{ breed }}</a>
-    <br />
+<div class="row card-group">
+  <div class="col-4 pb-2" *ngFor="let breed of breeds">
+    <div class="card">
+      <!--<img [src]="getDogImage(breed)" alt="">-->
+      <a routerLink="/dogs/{{breed}}">
+        <h4 style="text-align:center" class= "card-title">{{ breed }}</h4></a>
+    </div>
+  </div>
+</div>
     <!-- <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg"> -->
     <!-- <img src={{getDogImage(breed)}}> -->
-  </li>
-</ul>

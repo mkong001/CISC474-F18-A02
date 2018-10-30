@@ -1,9 +1,11 @@
-<h1>
+<h1 style="text-align:center">
   {{breedname}}s
 </h1>
 
-<ul>
-    <li *ngFor="let dog of breed">
-      <img src="{{ dog }}">
-    </li>
-  </ul>
+<div class="row card-group">
+    <div class="col-4 pb-3" *ngFor="let dog of breed">
+      <div class="card">
+          <img src="{{ dog }}" height="300px">
+      </div>
+    </div>
+  </div>

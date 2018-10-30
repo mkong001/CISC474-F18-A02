@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BreedsComponent } from './breeds/breeds.component';
 import { DogsComponent } from './dogs/dogs.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     BreedsComponent,
     DogsComponent,
-    SidebarComponent,
     ContactComponent
   ],
   imports: [
